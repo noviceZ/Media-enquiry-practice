@@ -1,0 +1,288 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+	//border:1px solid #000;
+}
+
+body {                                                               /*1366px*/
+	background-image:url(images/1.jpg);
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-size:cover;
+	padding:0;
+	margin:0;
+	font-size:1em;
+}
+/*整个容器*/
+#allcontainer {
+	text-align:center;
+}
+/*自定义字体*/
+@font-face {
+	font-family:font1;
+	src:url(fonts/fontawesome-webfont.eot);
+	font-family:font2;
+	src:url(fonts/fontawesome-webfont.woff);
+}
+.title {
+	font-family:font1;
+	color:#FFF;
+	margin-top:30px;
+	font-size:3.125em;
+}
+/*body容器*/
+.bodycontainer {
+	width:44.88%;                                              /*614.7px*/
+	height:507px;
+	border:1px solid #FFF;
+	margin:auto;
+	box-shadow:0px 5px 9px 0px rgba(0, 0, 0, 0.68);
+}
+/*username文字*/
+.username {
+	text-align:left;
+	font-family:font1;
+	letter-spacing:0.2em;
+	color:#FFF;
+	font-size:1em;
+	margin-top:40px;
+	margin-left:6.5%;                                         /*40px*/
+}
+/*username输入框*/
+input[name = username] {
+	margin-top:-8px;
+	text-align:left;
+	margin-left:1.6%;                                          /*10px*/
+	width:86%;                                            /*520px*/
+	height:41px;
+	border-radius:3px;
+	border-style:none;
+}
+/*username输入框里的文字*/
+input[placeholder=Username] {
+	font-size:1.125em;
+	padding-left:2%;
+	font-family:Georgia, "Times New Roman", Times, serif;
+}
+/*password文字*/
+.password {
+	text-align:left;
+	font-family:font1;
+	letter-spacing:0.2em;
+	color:#FFF;
+	font-size:1em;
+	margin-top:35px;
+	margin-left:6.5%;                                         /*40px*/
+}
+/*password输入框*/
+input[name = password] {
+	margin-top:-8px;
+	text-align:left;
+	margin-left:3%;                                          /*10px*/
+	width:86%;                                            /*520px*/
+	height:41px;
+	border-radius:3px;
+	border-style:none;
+}
+/*password输入框里的文字*/
+input[placeholder=".........."] {
+	font-size:1.125em;
+	padding-left:2%;
+	font-family:Georgia, "Times New Roman", Times, serif;
+}
+/*checkbox*/
+input[name=checkbox] {
+	margin-top:35px;
+	margin-left:-61%;
+	width:1em;
+	height:auto;
+	background-color:#201548;
+	cursor:pointer;
+}
+/*rember me文字*/
+.rme {
+	color:#FFF;
+	letter-spacing:0.2em;
+	font-size:0.875em;
+}
+/*checkbox选中之前插入的内容,即原本的样式*/
+input[name=checkbox]:before {
+	content: "";
+	position: absolute;
+	width: 1em;
+	height: 1em;
+	background: inherit; 
+}
+/*checkbox选中之后插入的内容*/
+input[name=checkbox]:after {
+	content: ""; 
+	position: absolute;
+	z-index: 1;
+	width: 1em;
+	height: 1em;
+	border: 1px solid #00BCD4; 
+	-webkit-transition: .4s all;
+	-moz-transition: .4s all;
+	-o-transition: .4s all;
+	-ms-transition: .4s all;
+	transition: .4s all;
+}
+/*选中的元素*/
+input[name=checkbox]:checked:after {
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);                      /*逆时针旋转45°*/
+	height: .5rem;                                 /*高度改变*/
+	border-color: #00BCD4;
+	border-top-color: transparent;
+	border-right-color: transparent;
+}
+/*login按钮*/                                        /*这里刷新页面位置也会改变因为写在一个样式里了*/
+input[name=submit] {
+	margin-top:40px;
+	width:90%;                                            /*520px*/
+	background-color:#00BCD4;
+	color:#FFF;
+	height:44px;
+	border-radius:3px;
+	border-style:none;
+	font-size:1em;
+	cursor:pointer;
+	border:1px solid #00BCD4;
+	transition:0.4s ease;
+}
+input[name=submit]:hover {
+	background-color:transparent;
+	color:#00BCD4;
+}
+/*forgot password文字容器*/
+.fpcontainer {
+	margin-top:46px;
+}
+/*forgot password文字*/
+.fpassword {
+	color:#FFF;
+	font-size:1em;
+	text-decoration:none;
+	letter-spacing:0.2em;
+	transition:0.4s ease;
+}
+.fpassword:hover {
+	color:#00BCD4;
+}
+/*图标*/
+.icontainer {
+	margin-top:25px;
+}
+.icontainer a {
+	font-size: 0.8em;
+    color: #fff;
+    margin: 0 0.5em;
+    display: inline-block;                         /*使它能改变尺寸且同行排列*/
+    text-align: center;
+    position: relative;
+    z-index: 999;
+    -webkit-transition: .5s all;
+    -moz-transition: .5s all;
+    -o-transition: .5s all;
+    -ms-transition: .5s all;
+    transition: .5s all;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-o-border-radius: 50%;
+	-ms-border-radius: 50%;
+    border-radius: 50%;
+	width: 30px;
+    height: 30px;
+    line-height: 2.4em;
+}
+.icontainer a:hover {
+	color:#FFF;
+	border:1px solid #FFF;
+	transform: scale(1.2);
+}
+/*底部文字*/
+.fcontainer {
+	margin-top:3.2em;
+	margin-bottom:2.2em;
+}
+.foot {
+	color:#FFF;
+	font-size:0.9em;
+	letter-spacing:2px;
+}
+.foot a {
+	color:#FFF;
+	text-decoration:none;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	-ms-transition: 0.5s all;
+}
+.foot a:hover {
+	color: #00BCD4;
+}
+/*媒体查询*/
+@media screen and (max-width:1300px) {
+	input[name=submit] {
+		width:80%;
+	}
+	input[name=checkbox] {
+		margin-left:-58%;
+		transition:2s;
+	}
+	.foot, .foot a {
+		letter-spacing:1px;
+		transition:1s;
+	}
+}
+@media screen and (max-width:842px) {
+	input[name=checkbox] {
+		margin-left:-38%;
+		transition:2s;
+	}
+	.fcontainer {
+		line-height:30px;
+		width:400px;
+		margin:auto;
+		border:1px solid #000;
+	}
+}
+@media screen and (max-width:710px) {
+	#allcontainer {
+		width:700px;
+	}
+}
+@media screen and (max-width:650px) {
+	#allcontainer {
+		width:650px;
+		transition:1.5s;
+	}
+	.icontainer a {
+		font-size: 0.5em;
+		margin:0 0.2em;
+	    display: inline-block;                         /*使它能改变尺寸且同行排列*/
+        text-align: center;
+        position: relative;
+        z-index: 999;
+        -webkit-transition: .5s all;
+        -moz-transition: .5s all;
+        -o-transition: .5s all;
+        -ms-transition: .5s all;
+        transition: .5s all;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+	    -webkit-border-radius: 50%;
+    	-moz-border-radius: 50%;
+	    -o-border-radius: 50%;
+    	-ms-border-radius: 50%;
+        border-radius: 50%;
+	    width: 30px;
+        height: 30px;
+        line-height: 2.4em;
+		color:#FFF;
+	}
+}
